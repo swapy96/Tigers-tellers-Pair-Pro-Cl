@@ -1,12 +1,13 @@
 import Form from "../components/Form";
-// import Results from "../components/Results/Results";
+import Results from "../components/Results/Results";
+function Home({handleSubmit, result}) {
 
-function Home() {
+   
    return (
       <>
          <div className="container">
-            <Form />
-            {/* <Results /> */}
+            <Form handleSubmit={handleSubmit}/>
+            {result ? <Results result={result} />: ""}
          </div>
       </>
    );

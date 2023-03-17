@@ -1,52 +1,27 @@
-import axios from "axios";
+import { Link } from "react-router-dom"
 import "./Form.scss";
-import { useState } from "react";
-const URL = "http://localhost:9898";
 
-function Form() {
-  const [sign, setSign] = useState();
-  const [day, setDay] = useState();
+function Form({handleSubmit}) {
 
   const params = URLSearchParams;
   console.log("params: ", params);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    console.log("e: ", event.target.value);
-
-    axios
-      .get(`${URL}?sign=${sign}&day=${day}`)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-  };
-
-  console.log("sign: ", sign);
 
   return (
     <>
-    <h1>Horoscope</h1>
+    
       <div className="form__container">
-        <form onClick={handleSubmit} className="form__form">
-          <label className="form__label">
+        <form onSubmit={handleSubmit} className="form__form">
+          {/* <label className="form__label">
             Your name:&nbsp;&nbsp;
             <input type="text" className="form__input" />
-          </label>
+          </label> */}
           <br />
           <label className="form__label">
             Zodiac Sign:
             <select
-              name="select"
+              name="sign"
               className="form__select"
-              value={sign}
-              onChange={(e) => {
-                setSign(e.target.value);
-              }}
             >
               <option value="">-- Please select --</option>
               <option value="aries">Aries</option>
@@ -71,8 +46,8 @@ function Form() {
               <input
                 type="radio"
                 id="option1"
-                name="option"
-                value="option1"
+                name="day"
+                value="Yesterday"
                 className="form__radio-input"
               />
             </div>
@@ -83,8 +58,8 @@ function Form() {
               <input
                 type="radio"
                 id="option2"
-                name="option"
-                value="option2"
+                name="day"
+                value="Today"
                 className="form__radio-input"
               />
             </div>
@@ -92,12 +67,11 @@ function Form() {
               <label htmlFor="option3" className="form__radio-label">
                 Tomorrow
               </label>
-
               <input
                 type="radio"
                 id="option3"
-                name="option"
-                value="option3"
+                name="day"
+                value="Tomorrow"
                 className="form__radio-input"
               />
             </div>

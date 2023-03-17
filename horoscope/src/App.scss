@@ -73,7 +73,10 @@ body{
   width: 100%;
   padding: 0 1rem;
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
 img {
