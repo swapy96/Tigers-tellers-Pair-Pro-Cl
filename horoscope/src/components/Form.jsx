@@ -30,6 +30,7 @@ function Form() {
 
   return (
     <>
+    <h1>Horoscope</h1>
       <div className="form__container">
         <form onClick={handleSubmit} className="form__form">
           <label className="form__label">
