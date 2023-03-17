@@ -6,7 +6,7 @@ function signForm () {
     <div className="form__container">
       <form className="form__form">
         <label className="form__label">
-          Nombre
+          Your name:&nbsp;&nbsp;
           <input type="text" className="form__input" />
         </label>
         <br />
