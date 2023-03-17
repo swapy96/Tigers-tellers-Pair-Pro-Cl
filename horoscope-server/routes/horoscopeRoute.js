@@ -6,15 +6,15 @@ const fs = require('fs');
 const { response } = require('express');
 
 
-const sign = "aries"
-const day = "today"
 
-const url = `https://aztro.sameerkumar.website?sign=${sign}&day=${day}`
 
 
 router.get('/',(req, response)=>{
-  axios.post(url).then((res)=>{console.log(res.data)
+  console.log(req.query)
+  axios.post(`https://aztro.sameerkumar.website?sign=${req.query.sign}&day=${req.query.day}`).then((res)=>{
+    console.log(res.data)
   response.send(res.data)});
+  
 
 })
 
