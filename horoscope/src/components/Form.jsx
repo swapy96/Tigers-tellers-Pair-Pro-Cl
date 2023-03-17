@@ -3,7 +3,9 @@ import './Form.scss';
 function signForm () {
 
   return (
+    
     <div className="form__container">
+     <h1>Horoscope</h1>
       <form className="form__form">
         <label className="form__label">
           Your name:&nbsp;&nbsp;

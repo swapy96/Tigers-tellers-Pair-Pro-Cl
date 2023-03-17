@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Space and Astronomy';
+  src: url('./fonts/SpaceandAstronomy.woff2') format('woff2'),
+      url('./fonts/SpaceandAstronomy.woff') format('woff'),
+      url('./fonts/SpaceandAstronomy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .App {
   text-align: center;
 }
@@ -39,7 +49,7 @@
 
 
 html {
-  font-family: 'AvenirNext LT Pro', sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   box-sizing: border-box;
 }
 
@@ -54,7 +64,7 @@ html {
 body{
  background-image: url(./images/bg-image.jpg);
  background-repeat: no-repeat;
- background-size: cover;
+//  background-size: cover;
  overflow: hidden;
 
 }
@@ -72,5 +82,3 @@ img {
   outline: none;
 }
 
-h1{
-}
